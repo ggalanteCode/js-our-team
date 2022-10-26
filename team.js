@@ -30,3 +30,11 @@ let team = [
         image : "./img/barbara-ramos-graphic-designer.jpg"
     }
 ];
+
+printArray(team);
+
+function printArray(array) {
+    for(let i = 0; i < array.length; i++) {
+            console.log(`name: ${array[i].name}, role: ${array[i].role}, image: ${array[i].image}`);
+    }
+}
