@@ -32,6 +32,7 @@ let team = [
 ];
 
 printArray(team);
+printDOM(team);
 
 function printArray(array) {
     let object;
@@ -39,6 +40,17 @@ function printArray(array) {
         object = array[i];
         for(let key in object) {
             console.log(`${key}: ${object[key]}`);
+        }
+    }
+}
+
+function printDOM(array) {
+    let teamDiv = document.getElementById('teamDiv');
+    let object;
+    for(let i = 0; i < array.length; i++) {
+        object = array[i];
+        for(let key in object) {
+            teamDiv.innerHTML += `<div>${key}: ${object[key]}</div>`;
         }
     }
 }
