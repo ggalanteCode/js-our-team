@@ -34,7 +34,11 @@ let team = [
 printArray(team);
 
 function printArray(array) {
+    let object;
     for(let i = 0; i < array.length; i++) {
-            console.log(`name: ${array[i].name}, role: ${array[i].role}, image: ${array[i].image}`);
+        object = array[i];
+        for(let key in object) {
+            console.log(`${key}: ${object[key]}`);
+        }
     }
 }
