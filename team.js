@@ -50,7 +50,11 @@ function printDOM(array) {
     for(let i = 0; i < array.length; i++) {
         object = array[i];
         for(let key in object) {
-            teamDiv.innerHTML += `<div>${key}: ${object[key]}</div>`;
+            if(key === 'image') {
+                teamDiv.innerHTML += `<div><img src=${object[key]}></div>`;
+            } else {
+                teamDiv.innerHTML += `<div>${key}: ${object[key]}</div>`;
+            }
         }
     }
 }
